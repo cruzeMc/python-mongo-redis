@@ -56,6 +56,10 @@ class Mongo(Resource):
         result = update_person(id, person)
         return {'_id': id}, 200
 
+    def delete(self, id):
+        result = delete_person(id)
+        return {'_id': id}, 200
+
 
 class MongoList(Resource):
     def get(self, age):

@@ -67,4 +67,4 @@ def update_person(id, person):
 def delete_person(id):
     db = client['mydb']
     coll = db.get_collection('example')
-    coll.delete_one(id)
+    coll.delete_one({'_id':id})
